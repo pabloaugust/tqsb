@@ -1,5 +1,5 @@
 /* style.css */
-/* fix: mobiele weergave YouTube-knop altijd zichtbaar */
+/* mobile fix: YouTube knop altijd zichtbaar binnen viewport */
 
 body.tqsb-page {
   margin: 0;
@@ -14,20 +14,20 @@ body.tqsb-page {
 
 .qsb-button {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 5dvh; /* Dynamische viewporthoogte, voorkomt verdwijnen achter softbar */
+  right: 5vw;   /* Dynamische viewportbreedte */
   font-size: 1.5em;
   padding: 18px 36px;
-  background-color: rgba(0, 255, 136, 0.8);
+  background-color: rgba(0, 255, 136, 0.9);
   color: black;
   font-weight: bold;
   border: none;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.8);
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
-  z-index: 999;
+  z-index: 9999; /* boven alles, ook op mobiel */
 }
 
 .qsb-button:hover {
@@ -47,12 +47,21 @@ body.tqsb-page {
   white-space: pre;
 }
 
+/* Mobiele optimalisatie */
 @media (max-width: 600px) {
   .qsb-button {
     font-size: 1em;
     padding: 14px 24px;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+    bottom: 5dvh; /* gebruik dynamic viewport unit */
+    right: 5vw;
+    left: auto;
+    z-index: 10000;
+  }
+
+  .qsb-label {
+    font-size: 2.5em;
+    top: 20px;
+    left: 20px;
+    transform: none;
   }
 }
