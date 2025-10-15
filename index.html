@@ -1,74 +1,47 @@
-<!-- index.html -->
+<!-- index.html met klikbare achtergrondafbeelding -->
 <!-- /mnt/data/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Qaintai skAI Band</title>
-  <meta name="description" content="The Qaintai skAI Band – Synth dreams and artificial souls. Listen now.">
-  <meta name="keywords" content="Qaintai, skAI Band, AI Music, Artificial Band, Synth AI">
-  <meta name="author" content="Qaintai Network">
-  <link rel="canonical" href="https://planetqaintai.org/index.html">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://planetqaintai.org/index.html">
-  <meta property="og:title" content="The Qaintai skAI Band">
-  <meta property="og:description" content="Synth dreams and artificial souls. Green intoxicated lyrics by Pablo August. Discover The Qaintai skAI Band.">
-  <meta property="og:image" content="https://planetqaintai.org/media/img/tqsb.png">
-  <meta property="og:site_name" content="Planet Qaintai">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://planetqaintai.org/index.html">
-  <meta name="twitter:title" content="The Qaintai skAI Band">
-  <meta name="twitter:description" content="Synth dreams and artificial souls. Discover The Qaintai skAI Band.">
-  <meta name="twitter:image" content="https://planetqaintai.org/media/img/tqsb.png">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "The Qaintai skAI Band",
-    "url": "https://planetqaintai.org/index.html",
-    "genre": "AI Synthwave",
-    "description": "Synth dreams and artificial souls. Discover The Qaintai skAI Band.",
-    "image": "https://planetqaintai.org/media/img/tqsb.png",
-    "sameAs": [
-      "https://www.youtube.com/watch?v=bZXa63ZaYu8&list=PLARWxOmZIufXPmIKNKT70Y3M7I5pBfglF"
-    ]
-  }
-  </script>
-
-  <link rel="icon" type="image/png" href="/media/img/logoq.png">
-  <link rel="stylesheet" href="/css/style.css">
-
+  <meta name="description" content="The Qaintai skAI Band – Synth dreams and artificial souls. Listen now." />
+  <meta name="keywords" content="Qaintai, skAI Band, AI Music, Artificial Band, Synth AI" />
+  <meta name="author" content="Qaintai Network" />
+  <link rel="canonical" href="https://planetqaintai.org/index.html" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/png" href="/media/img/logoq.png" />
   <style>
-    body.tqsb-page {
+    body {
       margin: 0;
       padding: 0;
-      height: 100vh;
       background: url('/media/img/tqsb.png') no-repeat bottom right fixed;
       background-size: contain;
       background-color: black;
-      position: relative;
+      height: 100vh;
       overflow: hidden;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      position: relative;
     }
 
-    .qsb-letters {
-      color: #00ff88;
-      font-family: monospace;
-      font-size: 6vw;
-      line-height: 1.2;
-      padding-left: 4vw;
-      white-space: pre-line;
+    /* Klikbare achtergrondlink */
+    .bg-link {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
     }
 
+    .bg-link a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-indent: -9999px; /* Onzichtbare linktekst */
+    }
+
+    /* YouTube knop */
     .qsb-button {
       position: absolute;
       bottom: 40px;
@@ -84,6 +57,7 @@
       cursor: pointer;
       text-decoration: none;
       transition: all 0.3s ease;
+      z-index: 2;
     }
 
     .qsb-button:hover {
@@ -99,14 +73,33 @@
         right: 20px;
       }
     }
+
+    /* Grote groene tekst linksboven */
+    .tqsb-label {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #00ff88;
+      font-size: 5vw;
+      font-weight: bold;
+      line-height: 1;
+      z-index: 2;
+      white-space: pre-line;
+    }
   </style>
 </head>
-<body class="tqsb-page">
-  <div class="qsb-letters">
+<body>
+  <div class="bg-link">
+    <a href="https://www.youtube.com/watch?v=bZXa63ZaYu8&list=PLARWxOmZIufXPmIKNKT70Y3M7I5pBfglF" target="_blank" rel="noopener noreferrer">
+      Clickable background
+    </a>
+  </div>
+
+  <div class="tqsb-label">
     t<br>Q<br>s<br>B
   </div>
 
-  <a href="https://www.youtube.com/watch?v=bZXa63ZaYu8&list=PLARWxOmZIufXPmIKNKT70Y3M7I5pBfglF" 
+  <a href="https://www.youtube.com/watch?v=bZXa63ZaYu8&list=PLARWxOmZIufXPmIKNKT70Y3M7I5pBfglF"
      class="qsb-button" target="_blank" rel="noopener noreferrer">
     🎧 Listen on YouTube
   </a>
