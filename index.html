@@ -7,7 +7,7 @@
   <title>Choose 1 – Qaintai</title>
   <link rel="icon" type="image/png" href="/media/img/logoq.png" />
   <style>
-    /* Basislayout */
+    /* ===== BASIS ===== */
     body {
       margin: 0;
       padding: 0;
@@ -30,7 +30,6 @@
       color: white;
     }
 
-    /* Knoppen algemene stijl */
     a {
       display: block;
       padding: 18px 36px;
@@ -43,27 +42,45 @@
       transition: all 0.3s ease;
     }
 
-    /* Rood: Kings of Qaintai */
+    /* ===== RODE KNOP (KINGS) ===== */
     a.kings {
       color: red;
       border-color: red;
+      animation: glow-red 6s infinite alternate;
     }
     a.kings:hover {
       background: red;
       color: black;
+      box-shadow: 0 0 25px red;
     }
 
-    /* Blauw: The Qaintai skAI Band */
+    /* ===== BLAUWE KNOP (SKAI) ===== */
     a.skai {
       color: #0099ff;
       border-color: #0099ff;
+      animation: glow-blue 6s infinite alternate;
+      animation-delay: 3s; /* om-en-om effect */
     }
     a.skai:hover {
       background: #0099ff;
       color: black;
+      box-shadow: 0 0 25px #0099ff;
     }
 
-    /* Mobiele weergave */
+    /* ===== GLOEI-ANIMATIES ===== */
+    @keyframes glow-red {
+      0% { box-shadow: 0 0 0 red; }
+      50% { box-shadow: 0 0 20px red; }
+      100% { box-shadow: 0 0 0 red; }
+    }
+
+    @keyframes glow-blue {
+      0% { box-shadow: 0 0 0 #0099ff; }
+      50% { box-shadow: 0 0 20px #0099ff; }
+      100% { box-shadow: 0 0 0 #0099ff; }
+    }
+
+    /* ===== MOBIEL ===== */
     @media (max-width: 600px) {
       h1 {
         font-size: 1.3em;
@@ -77,13 +94,17 @@
   </style>
 </head>
 <body>
-  <a href="https://www.youtube.com/@KingsofQaintai" 
-     class="kings" target="_blank" rel="noopener noreferrer">Kings of Qaintai</a>
+  <a href="https://www.youtube.com/@KingsofQaintai"
+     class="kings" target="_blank" rel="noopener noreferrer">
+     Kings of Qaintai
+  </a>
 
   <h1>Choose 1</h1>
 
-  <a href="https://youtube.com/playlist?list=PLARWxOmZIufXPmIKNKT70Y3M7I5pBfglF&si=c9tDt-2bNRzl0yGf" 
-     class="skai" target="_blank" rel="noopener noreferrer">The Qaintai skAI Band</a>
+  <a href="https://youtube.com/playlist?list=PLARWxOmZIufXPmIKNKT70Y3M7I5pBfglF&si=c9tDt-2bNRzl0yGf"
+     class="skai" target="_blank" rel="noopener noreferrer">
+     The Qaintai skAI Band
+  </a>
 </body>
 </html>
 <!-- index.html -->
