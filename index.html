@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Choose 1 – Qaintai</title>
   <link rel="icon" type="image/png" href="/media/img/logoq.png" />
-  <link rel="stylesheet" href="/css/style.css" />
   <style>
+    /* Basislayout */
     body {
       margin: 0;
       padding: 0;
@@ -30,22 +30,36 @@
       color: white;
     }
 
+    /* Knoppen algemene stijl */
     a {
       display: block;
       padding: 18px 36px;
       margin: 10px 0;
       font-size: 1.2em;
       font-weight: bold;
-      color: red;
-      background: transparent;
-      border: 2px solid red;
-      border-radius: 8px;
       text-decoration: none;
+      border: 2px solid;
+      border-radius: 8px;
       transition: all 0.3s ease;
     }
 
-    a:hover {
+    /* Rood: Kings of Qaintai */
+    a.kings {
+      color: red;
+      border-color: red;
+    }
+    a.kings:hover {
       background: red;
+      color: black;
+    }
+
+    /* Blauw: The Qaintai skAI Band */
+    a.skai {
+      color: #0099ff;
+      border-color: #0099ff;
+    }
+    a.skai:hover {
+      background: #0099ff;
       color: black;
     }
 
@@ -63,8 +77,10 @@
 </head>
 <body>
   <h1>Choose 1</h1>
-  <a href="https://www.youtube.com/@KingsofQaintai" target="_blank" rel="noopener noreferrer">Kings of Qaintai</a>
-  <a href="https://youtube.com/playlist?list=PLARWxOmZIufXPmIKNKT70Y3M7I5pBfglF&si=c9tDt-2bNRzl0yGf" target="_blank" rel="noopener noreferrer">The Qaintai skAI Band</a>
+  <a href="https://www.youtube.com/@KingsofQaintai" 
+     class="kings" target="_blank" rel="noopener noreferrer">Kings of Qaintai</a>
+  <a href="https://youtube.com/playlist?list=PLARWxOmZIufXPmIKNKT70Y3M7I5pBfglF&si=c9tDt-2bNRzl0yGf" 
+     class="skai" target="_blank" rel="noopener noreferrer">The Qaintai skAI Band</a>
 </body>
 </html>
 <!-- index.html -->
