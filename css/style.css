@@ -1,11 +1,12 @@
 /* style.css */
 /* mobile fix: YouTube knop altijd zichtbaar binnen viewport */
+/* background updated: qaintai.png */
 
 body.tqsb-page {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: url('/media/img/tqsb.png') no-repeat bottom right fixed;
+  background: url('/media/img/qaintai.png') no-repeat bottom right fixed;
   background-size: contain;
   background-color: black;
   position: relative;
